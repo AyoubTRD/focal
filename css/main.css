@@ -345,6 +345,75 @@ nav .nav-link a:hover {
   text-align: center;
 }
 
+#portfolio .grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-row-gap: 20px;
+  grid-column-gap: 20px;
+  margin-top: 70px;
+}
+
+#portfolio .filter {
+  background-color: #191f21;
+  color: white;
+  padding-top: 35px;
+  padding-left: 30px;
+  text-align: left;
+}
+
+#portfolio .filter h4 {
+  font-size: 20px;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+
+#portfolio .filter ul {
+  list-style: none;
+}
+
+#portfolio .filter li {
+  color: #919191;
+  transition: 0.15s;
+  margin-bottom: 10px;
+}
+
+#portfolio .filter li span {
+  cursor: pointer;
+}
+
+#portfolio .filter li span:hover {
+  color: #fff;
+}
+
+#portfolio .filter li.active {
+  color: #fff;
+}
+
+#portfolio .grid-item {
+  cursor: pointer;
+  position: relative;
+}
+
+#portfolio .grid-item .hover {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #2acc7093;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 32px;
+  opacity: 0;
+  transition: 0.25s;
+}
+
+#portfolio .grid-item:hover .hover {
+  opacity: 1;
+}
+
 #contact-me {
   background-color: #252e30;
 }
