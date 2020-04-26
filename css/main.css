@@ -345,6 +345,80 @@ nav .nav-link a:hover {
   text-align: center;
 }
 
+#contact-me {
+  background-color: #252e30;
+}
+
+#contact-me h2 {
+  color: #fff;
+}
+
+#contact-me .grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-column-gap: 35px;
+  grid-row-gap: 30px;
+}
+
+#contact-me .field {
+  margin-bottom: 20px;
+}
+
+#contact-me .field label {
+  color: white;
+  margin-bottom: 10px;
+  display: inline-block;
+}
+
+#contact-me .field input,
+#contact-me .field textarea {
+  display: block;
+  border: none;
+  border-radius: 3px;
+  background-color: #4a5355;
+  width: 100%;
+  color: #fff;
+  padding: 15px 10px;
+  font-family: inherit;
+  transition: 0.2s;
+}
+
+#contact-me .field input:hover,
+#contact-me .field textarea:hover {
+  background-color: #565e5f;
+}
+
+#contact-me .field input:focus,
+#contact-me .field textarea:focus {
+  box-shadow: 0 2px 20px 2px #2acc7021;
+}
+
+#contact-me .field input {
+  height: 50px;
+}
+
+#contact-me .field textarea {
+  height: 200px;
+}
+
+#contact-me .info {
+  width: 200px;
+  display: flex;
+  justify-content: space-between;
+}
+
+#contact-me p {
+  margin-bottom: 30px;
+}
+
+#contact-me .info .label {
+  color: white;
+}
+
+#contact-me .info-data {
+  color: #919191;
+}
+
 .btn {
   text-decoration: none;
   color: white;
@@ -382,6 +456,17 @@ nav .nav-link a:hover {
 .btn-text:hover {
   background-color: rgba(42, 204, 113, 0.1);
   /* border-color: #2acc71; */
+}
+
+.btn-dark {
+  background-color: #191f21;
+  color: white;
+  border-color: transparent;
+}
+
+.btn-dark:hover {
+  color: #2acc71;
+  background-color: #191f21;
 }
 
 .container {

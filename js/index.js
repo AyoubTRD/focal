@@ -1,5 +1,5 @@
 AOS.init({
-  duration: 800,
+  duration: 1300,
 });
 
 const links = Array.from(document.querySelectorAll("a")).filter(
@@ -9,8 +9,10 @@ links.forEach((link) => {
   link.onclick = (e) => {
     e.preventDefault();
     const section = document.querySelector(link.getAttribute("href"));
-    section.scrollIntoView({
+    window.scrollTo({
       behavior: "smooth",
+      top: section.offsetTop - 75,
+      left: 0,
     });
   };
 });
@@ -58,7 +60,7 @@ const observer = new IntersectionObserver(
     }
   },
   {
-    threshold: 0.95,
+    threshold: 1.0,
   }
 );
 
