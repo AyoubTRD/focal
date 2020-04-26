@@ -242,6 +242,41 @@ nav .nav-link a:hover {
   margin-bottom: 20px;
 }
 
+#life {
+  background-color: #fff;
+  clip-path: polygon(
+    0 0,
+    calc(50% - 20px) 0,
+    50% 20px,
+    calc(50% + 20px) 0,
+    100% 0,
+    100% 100%,
+    0 100%
+  );
+}
+
+#life .grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-column-gap: 25px;
+  grid-row-gap: 30px;
+}
+
+#life .right p {
+  margin-bottom: 15px;
+}
+
+#life .right span {
+  color: white;
+  background-color: #2acc71;
+  padding: 10px 10px;
+  font-size: 16px;
+}
+
+#life .item {
+  margin-bottom: 65px;
+}
+
 .btn {
   text-decoration: none;
   color: white;
@@ -277,8 +312,8 @@ nav .nav-link a:hover {
 }
 
 .btn-text:hover {
-  background: none;
-  border-color: #2acc71;
+  background-color: rgba(42, 204, 113, 0.1);
+  /* border-color: #2acc71; */
 }
 
 .container {
@@ -326,5 +361,5 @@ hr {
 }
 
 .secondary-separator {
-  margin: 40px 0;
+  margin: 30px 0;
 }
