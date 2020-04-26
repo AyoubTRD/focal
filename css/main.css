@@ -119,6 +119,10 @@ nav .nav-link a {
   transition: 0.2s ease-in-out;
 }
 
+nav .nav-link a.active {
+  color: #2acc71;
+}
+
 nav .nav-link a:hover {
   color: #2acc71;
 }
@@ -334,6 +338,11 @@ nav .nav-link a:hover {
   opacity: 1;
   position: relative;
   z-index: 900;
+}
+
+#portfolio {
+  background-color: #fff;
+  text-align: center;
 }
 
 .btn {
