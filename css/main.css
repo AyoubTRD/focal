@@ -641,7 +641,7 @@ hr {
     height: 100%;
     top: 0;
     left: 0;
-    background-color: #4a5355d0;
+    background-color: #4a535560;
     backdrop-filter: blur(8px);
     flex-direction: column;
     justify-content: space-around;
