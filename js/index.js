@@ -2,11 +2,23 @@ AOS.init({
   duration: 1300,
 });
 
+function closeNavBar() {
+  const navLinks = document.querySelector(".nav-links");
+  navLinks.classList.add("exit");
+  navLinks.classList.remove("active");
+  setTimeout(() => {
+    navLinks.classList.remove("exit");
+  }, 350);
+}
+
+document.querySelector(".fa-close").onclick = closeNavBar;
+
 const links = Array.from(document.querySelectorAll("a")).filter(
   (a) => a.getAttribute("href")[0] === "#"
 );
 links.forEach((link) => {
   link.onclick = (e) => {
+    closeNavBar();
     e.preventDefault();
     const section = document.querySelector(link.getAttribute("href"));
     window.scrollTo({
@@ -16,6 +28,9 @@ links.forEach((link) => {
     });
   };
 });
+
+document.querySelector(".fa-bars").onclick = () =>
+  document.querySelector(".nav-links").classList.add("active");
 
 const bars = document.querySelectorAll(".bar");
 
