@@ -9,9 +9,6 @@ html,
 body {
   width: 100%;
   font-family: Montserrat, sans-serif;
-}
-
-html {
   overflow-x: hidden;
 }
 
@@ -79,8 +76,6 @@ nav {
   justify-content: space-between;
   align-items: center;
   background-color: #252e30;
-  position: sticky;
-  top: 0;
   z-index: 1000;
 }
 
@@ -642,7 +637,7 @@ hr {
 @media all and (max-width: 1000px) {
   .nav-links {
     position: fixed;
-    width: 100%;
+    width: 100vw;
     height: 100%;
     top: 0;
     left: 0;

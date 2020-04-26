@@ -1,6 +1,7 @@
 AOS.init({
   duration: 1300,
 });
+new Sticky("[data-sticky")
 
 function closeNavBar() {
   const navLinks = document.querySelector(".nav-links");
@@ -11,6 +12,8 @@ function closeNavBar() {
   }, 350);
 }
 
+const navLinks = document.querySelectorAll(".nav-links a");
+
 document.querySelector(".fa-close").onclick = closeNavBar;
 
 const links = Array.from(document.querySelectorAll("a")).filter(
@@ -18,7 +21,9 @@ const links = Array.from(document.querySelectorAll("a")).filter(
 );
 links.forEach((link) => {
   link.onclick = (e) => {
-    closeNavBar();
+    if (link.parentElement.classList.contains("nav-link")) {
+      closeNavBar();
+    }
     e.preventDefault();
     const section = document.querySelector(link.getAttribute("href"));
     window.scrollTo({
@@ -79,7 +84,6 @@ const observer = new IntersectionObserver(
   }
 );
 
-const navLinks = document.querySelectorAll("nav .nav-link a");
 const sections = Array.from(navLinks).map((link) =>
   document.querySelector(link.getAttribute("href"))
 );
